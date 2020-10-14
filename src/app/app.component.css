@@ -3,7 +3,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 1em;
-  height: 15vh;
+  height: 18vh;
   align-items: center;
   padding: 0 1em;
 }
@@ -32,6 +32,16 @@ header > form > button {
   font-size: large;
 }
 main {
-  height: 85vh;
+  height: 82vh;
   background-color: #eeeeee;
 }
+
+@media screen and (min-width: 480px) {
+    header {
+      height: 10vh;
+    }
+    main {
+        height: 90vh;
+    }
+  }
+  
