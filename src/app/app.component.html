@@ -1,8 +1,25 @@
 <header>
-    <h1>TraxSmart Movie Library</h1>
-    <form>
-      <input type="text" placeholder="Search Movies ...">
-      <button>Search</button>
+  <h1>TraxSmart Movie Library</h1>
+  <form #searchForm="ngForm" (ngSubmit)="fetchMovies(searchForm)" autocomplete="off">
+    <input type="text" placeholder="Search Movies ..." required ngModel name=movieName #movieName="ngModel">
+    <button>Search</button>
   </form>
 </header>
-<main></main>
+<main>
+  <section class="movies-list">
+    <div class="card" (click)="showDescription($event)" *ngFor="let movie of movies;">
+      <div class="movie" (click)="clickPropagation($event)">
+        <div class="short-info">
+          <img [src]="movie.poster_path" alt="Poster">
+          <div>
+            <h3>{{movie.original_title}}</h3>
+            <p>{{movie.vote_average}}/10</p>
+            <p>{{movie.release_date}}</p>
+          </div>
+        </div>
+        <p class="short-overview">{{movie.overview}}</p>
+      </div>
+    </div>
+  </section>
+  <section class="movie-description"></section>
+</main>

@@ -2,7 +2,7 @@ header {
   background-color: #393e46;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 1em;
+  /* grid-gap: 1em; */
   height: 18vh;
   align-items: center;
   padding: 0 1em;
@@ -20,12 +20,16 @@ header > form > input,
 button {
   border: 0.05em #00adb5 solid;
   border-radius: 0.15em;
+  font-size: large;
 }
 header > form > input {
   background-color: #ececec;
   height: 3em;
 }
-
+header > form > input:focus,
+button:focus {
+  outline: none;
+}
 header > form > button {
   background-color: #00adb5;
   font-weight: bold;
@@ -33,15 +37,83 @@ header > form > button {
 }
 main {
   height: 82vh;
-  background-color: #eeeeee;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  /* grid-gap: 1em; */
+  /* padding: 0 1em; */
+}
+.movies-list {
+  background-color: #f0f0f0;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.movie-description {
+  background-color: #ebf7f7;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 1em;
+  background-color: white;
+  width: 70%;
 }
 
+.movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.short-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.short-info > div > * {
+  margin-bottom: 0;
+  margin-top: 0.25em;
+}
+.short-info > img {
+  border-radius: 5px 5px 0 0;
+}
+.short-overview {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 10em;
+}
 @media screen and (min-width: 480px) {
-    header {
-      height: 10vh;
-    }
-    main {
-        height: 90vh;
-    }
+  header {
+    height: 10vh;
   }
-  
+  main {
+    height: 90vh;
+  }
+  .short-info {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .short-info > div {
+    padding-left: 1em;
+  }
+  .short-info > div > h3 {
+    font-size: large;
+  }
+  .short-info > div > p {
+    font-size: medium;
+  }
+  .short-overview{
+    font-size: small;
+    width: 25em;
+  }
+}
