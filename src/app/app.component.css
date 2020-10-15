@@ -146,6 +146,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-left: 1em;
 }
 .descriptor {
   color: #727272;
@@ -260,7 +261,7 @@ main {
 .job {
   color: #727272;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1024px) {
   header {
     height: 10vh;
   }
