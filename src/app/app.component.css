@@ -20,7 +20,6 @@ button {
   border: 0.05em #00adb5 solid;
   border-radius: 0.15em;
   font-size: medium;
-  text-transform: lowercase;
 }
 header > form > input {
   background-color: #ececec;
