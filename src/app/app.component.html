@@ -24,23 +24,27 @@
   </section>
   <section class="movie-description" *ngIf="details">
     <img [src]="details.backdrop_path" alt="Backdrop" class="backdrop">
-    <div class="poster">
-      <img [src]="details.poster_path" class="poster-image" alt="Poster">
-      <div>
-        <p class="title">{{details.original_title}}</p>
-        <div style="margin-top: 2em;">
-          <img
-            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAXACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/K4n4+ePpvAngVVsbn7LrGuXUel6dKArNBJJlpJwHBRjBAk8+1hhhAV5yAdz4heCLb4keC9Q0O8uL+0t9Qi8tp7KcwzwkEEMrDjggHawKsMqyspKn4O+JOjXfwN+IereH7rT/D8OsxwIZdT06zSFtRtpc7HLcuhbYQ0TMSpXgsux2/LPFbjzE8LZW8ZTw0qkJXjzqSXJJ6Rut9ejWl9HbS/2PB3DtLN8T7J1EpR15WviS87/AHre23W32d+zf8TJPid8MoZry4+0axpMz6bqTkKGkljAKysFAVTNC8U21RhfO28EEDva/PX4MfCK2+Nvju1hnt9Pm1R8raSTptFvGoJklZ1KysqZGI43UuzAbkXe6/eXgDwVa/Dnwbp+iWc17cW+nxeWst3OZppOSSWY+pJ4ACqMKoVQAOXwe49x/FOURxWLw3s1BKDqc11UnHSTS5U13erV3ZNtOz40yDDZVjXRpVeaTd+Xlsop9L317bGxXz9qv7G154//AGgvFnijxFfWS6Pql7BLYQ2ztNc/Z47O3hKNvQJCTLFKxIEpKy/KYnG6iivv+IOGctzyhDDZrSVWnGSnyu/K5JNLmS0ktfhd4vqmfO5dmuKwMpzwsuWUo8ra3s2m7dr2+4TwZ+xvqXwo+Omh65oOsQ3vhm1vZrqe2vmMd7ahra4hEauqlZ03TggOI3Xyl3PKWJH0FRRTyDhrLcko1MPldJU6c5ubir8qk0k+VbRTsnZWSd7LUeZZtiswnGri5c0opRv1aV7X7vXfd9T/2Q=="
-            alt="Rating">
-          <span style="vertical-align:super; " class="rating">{{details.vote_average}}/10</span>
+    <div class="content">
+      <div class="poster">
+        <img [src]="details.poster_path" class="poster-image" alt="Poster">
+        <div style="padding: 0;">
+          <p class="title">{{details.original_title}}</p>
+          <div style="margin-top: 2em;">
+            <img
+              src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAXACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/K4n4+ePpvAngVVsbn7LrGuXUel6dKArNBJJlpJwHBRjBAk8+1hhhAV5yAdz4heCLb4keC9Q0O8uL+0t9Qi8tp7KcwzwkEEMrDjggHawKsMqyspKn4O+JOjXfwN+IereH7rT/D8OsxwIZdT06zSFtRtpc7HLcuhbYQ0TMSpXgsux2/LPFbjzE8LZW8ZTw0qkJXjzqSXJJ6Rut9ejWl9HbS/2PB3DtLN8T7J1EpR15WviS87/AHre23W32d+zf8TJPid8MoZry4+0axpMz6bqTkKGkljAKysFAVTNC8U21RhfO28EEDva/PX4MfCK2+Nvju1hnt9Pm1R8raSTptFvGoJklZ1KysqZGI43UuzAbkXe6/eXgDwVa/Dnwbp+iWc17cW+nxeWst3OZppOSSWY+pJ4ACqMKoVQAOXwe49x/FOURxWLw3s1BKDqc11UnHSTS5U13erV3ZNtOz40yDDZVjXRpVeaTd+Xlsop9L317bGxXz9qv7G154//AGgvFnijxFfWS6Pql7BLYQ2ztNc/Z47O3hKNvQJCTLFKxIEpKy/KYnG6iivv+IOGctzyhDDZrSVWnGSnyu/K5JNLmS0ktfhd4vqmfO5dmuKwMpzwsuWUo8ra3s2m7dr2+4TwZ+xvqXwo+Omh65oOsQ3vhm1vZrqe2vmMd7ahra4hEauqlZ03TggOI3Xyl3PKWJH0FRRTyDhrLcko1MPldJU6c5ubir8qk0k+VbRTsnZWSd7LUeZZtiswnGri5c0opRv1aV7X7vXfd9T/2Q=="
+              alt="Rating">
+            <span class="rating">{{details.vote_average}}/10</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="info">
-      <p class="genres"><span class="descriptor">Genre </span>{{details.genres.toString()}}</p>
-      <p class="spoken-languages"><span class="descriptor">Language </span>{{details.spoken_languages.toString()}}</p>
-      <p class="release-date"><span class="descriptor">Release Date </span>{{details.release_date}}</p>
-      <p class="status"><span class="descriptor">Status </span>{{details.status}}</p>
+      <div class="info">
+        <p class="genres"><span class="descriptor">Genre </span>{{details.genres.toString()}}</p>
+        <p class="runtime"><span class="descriptor">Runtime </span>{{details.runtime}}</p>
+        <p class="spoken-languages"><span class="descriptor">Language </span>{{details.spoken_languages.toString()}}</p>
+        <p class="release-date"><span class="descriptor">Release Date </span>{{details.release_date}}</p>
+        <p class="status"><span class="descriptor">Status </span>{{details.status}}</p>
+        <p class="adult">{{details.adult}}</p>
+      </div>
     </div>
     <div class="external">
       <a href="{{details.imdb_id}}" class="imdb" target="_blank" rel="noopener noreferrer">
@@ -48,8 +52,38 @@
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAZCAYAAABzVH1EAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAABmJLR0QA/wD/AP+gvaeTAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTA0LTA2VDE5OjQzOjUzKzAwOjAwjhk1EgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wNC0wNlQxOTo0Mzo1MyswMDowMP9Eja4AAASlSURBVFhH1VdbaJxFFP7+f7PZuJubxbaGVNuKBiLGCwFFQnywpSqIFxRE8EHwSfqkVkRERIQiVvRJ8QIq6IsIvlSpD8UHkRahgvRBbWulxdhidBtju7lssvv7ff/MtNN/ZzfJphTysbNz5vxzOWfOmTNnotrc6WT+14eQnPsBUQ5rCkkNiEqjKAzvRTR7eHtSm9qPuNN+XWNIqkDcN47o3PdI4hVYIkksYRFFliCafWs1xke2n9Csr486LRNHsW150ITJIsvChZLy66b2IV7aP/RNfJasLOpb17xawwqvOp8HurqAgi0xB7rvrRBTh2jmIC7qqoGdHUDHKBuekjPfAsUtJLpN+zymgEoZKG0krW9Oas36L8dNctwNpDWXeLK+3LiXhW6B4+zDfnnyz5wFZrm7oheo5PoeI+Ry0NAtR0H+4W7p4MusrhTvBka2kabAfnn6VSpxEzD+KNtXe99IP/AUx42THrjAi9az9LFo3gKw+0P2ocD5QeDJl4Gt9wCbtrO+F/jxKC1EKy3DKI2KCAXu2IarbMPD0LWW8HD6lKmn/jO1jy1UYCm89DbwyjskqMyGdYYn5OkVPUXrWiyqW7nZMg1nUA9MdOAw/7josT9M20do4V661J7dtmHxwRf8q1AYWskhHcqzFFOZYr+xWqszsyJFQpimAJhmabFbPkq09q4XgXVXWAZR01gK7emBPCXrphv+xI1693Pgy/1k0hU75WqBtVatiM7U8UMUJhC1Qkj7zZro5OAr4KBD/uxrwG2PAzt5Dh95Bnh4J43vbYCPthVx/q/o8h5dwykycr2pW0KShyzoaVSZAw79bCzj8M1B4NOv6Wbu7HhoW5GxW01dY7jc+52hB+kKuVXb2EA67fsYeOMF03YInVOh7WVnuGPD15mNPXLS8O4bAybPGHq16GD4VxAr8aD7SC0R8MW2FZHAD95lGxY7qEhZB/8SIKGwCgL1ZZ69thWRwGN32obFxmFg3qYzSyKwq6tB24os0LVKvKl9dJcscQnR5Eg0oG1FFKUGvZtYGGAashTSYMDQe4o52nk463hSi5XjOSnw3mhAQLu2FVlktNq8mWkELynhSobEgWsM3Qoz88Cbz9mGxQLnygqnsP4Xk8hfGIJ9BBUjVqTIRZkoFy4w3BatO3XpospkxqG3xDSFe/4t27C440b+cZ5saL39MaYzH9kGoelGeU8tKqnNzB1UpModmmRqnsXRE5YgJhRm6SJl6yLlQNg98aclWmCEIfyT10kwpZ9gyu/jq/ctYbFnFxPXIQYUpf8ZBN8j6XuAZ0APHWl+lvlUP3dcKTiYgqegi1R/Y+5DQSBrMO2o/s42I1e6PdoxbkaFyWTpFtKCW0khVe8RucnfXIvj5jhfjyzjsm66FuRWN7McY9nEMsH52D/0RokqBxiyAy6gC8kdQn2f50IpbSoDNqS4eJIxncfblhDPQa/ESHwJpbePeDor7t4QQzKwnWN2redsOl9AiVSGZm/2bC4TUvZywd3mzURI3+y5/vtR552gvhrgShb+t8tdjACNfP5S2XO92xDVquWkeuQJ1Kb3US3acC2hvoi4bwcKQ5/hfzxWordPz8kuAAAAAElFTkSuQmCC"
           alt="IMDB">
       </a>
-      <a *ngIf="details.homepage" href="{{details.homepage}}" class="more-info" target="_blank" rel="noopener noreferrer">More Info ...</a>
+      <a *ngIf="details.homepage" href="{{details.homepage}}" class="more-info" target="_blank"
+        rel="noopener noreferrer">More Info ...</a>
     </div>
+    <p class="budget"><span class="descriptor">Budget </span>${{details.budget}}.00</p>
     <p class="overview">{{details.overview}}</p>
+    <div class="credits">
+      <h2>Cast</h2>
+      <div class="cast">
+        <div class="profile" *ngFor="let cast_ of cast">
+          <img [src]="cast_.profile_path" alt="Profile Picture" class="profile-picture">
+          <p class="name">{{cast_.name}}</p>
+          <p class="character">{{cast_.character}}</p>
+        </div>
+      </div>
+      <h2>Crew</h2>
+      <div class="crew">
+        <div class="profile" *ngFor="let crew_ of crew">
+          <img [src]="crew_.profile_path" alt="Profile Picture" class="profile-picture">
+          <p class="name">{{crew_.name}}</p>
+          <p class="job">{{crew_.job}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="similar">
+      <h2>Similar Movies</h2>
+      <div class="similar-list">
+        <div class="similar-movie" *ngFor="let similar of similar" (click)="loadMovieDetails($event)">
+          <img [src]="similar.poster_path" alt="Poster" class="similar-poster">
+          <p class="similar-title">{{similar.original_title}}</p>
+          <p style="display: none;">{{similar.id}}</p>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
