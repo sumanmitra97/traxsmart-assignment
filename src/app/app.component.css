@@ -260,7 +260,8 @@ main {
 .job {
   color: #727272;
 }
-@media screen and (min-width: 1024px) {
+/* screens larger than 1024px are targeted */
+@media screen and (min-width: 1024px) { 
   header {
     height: 10vh;
   }
